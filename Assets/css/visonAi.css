@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.vision_ai_container {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.img_container {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+
+}
+
+.img_container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img_container h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 500 !important;
+  }
+
+  @media (max-width: 768px) {
+    .img_container h1 {
+      font-size: 24px; 
+    }
+  }
+
+.text_of_ai {
+    padding: 20px !important;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li::before {
+    content: "\2022";
+    color: rgb(255, 174, 0);
+    font-size: 2rem !important;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+ul li {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .img_container {
+        max-width: 90%;
+    }
+}

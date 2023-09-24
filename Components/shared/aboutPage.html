@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../Assets/css/aboutPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <iframe
+          src="../shared/navbar.html"
+          frameborder="0"
+          width="100%"
+          height="90"
+        ></iframe>
+      </div>
+      <div class="about_image_container">
+        <img src="../../Assets/images/main-aboutus.jpg" />
+      </div>
+      <div class="content_container">
+        <p class="text_para_costa">
+          <span style="font-size: 1.3rem; font-weight: bold">Costacloud-:</span>
+          A Branch by Appolo Computers has been unwavering in its commitment to
+          deliver premier Buisness and IT Consulting Solutions. Today, we
+          tirelessly endeavor to synergize revolutionary technologies with
+          daring strategies to bolster businesses amidst contemporary market
+          landscape.
+        </p>
+        <p class="text_para_costa">
+          Our comprehensive array of offerings encompasses Artificial
+          Intelligence(Generative AI and Vision AI), Business Proccess
+          Automation and Management, DevOps and SecOps, Data/Content Security,
+          Cloud Business Continuity, and Automation, all Designed to empower
+          organizations in streamilining their operational workflows. Our
+          resolute dedication to enabling end-to-end automation for business
+          metamorphosis has positioned us as the prefferred ally for digital
+          transformation.
+        </p>
+        <p class="text_para_costa">
+          We possess the prowess to reshape your business paradigms, fostering a
+          culture of customer-centricity, agility, and innovation at very core.
+          Guided by a robust set of principles, we are resolute in delivering
+          superlative outcomes in a manner that enriches not only our clients
+          but also the environment we coexist with.
+        </p>
+        <p class="text_para_costa">
+          Collaborating with preeminent industry pioneer , our objective is to
+          sculpt strategies that will redefine the future and expedite
+          propserous growth for all. United with our clients , we aspire to
+          safeguard this planet for generations to come.
+        </p>
+      </div>
+      <section>
+        <div class="mission_container">
+          <h1 class="mission_heading">Our Missions</h1>
+          <div class="logo_text_mission">
+            <img src="../../Assets/images/aboutus-our-mission.jpg" />
+            <p>
+              To deliver Optimum solutions to our clients to help them create
+              significant improvements in their performance and to build a firm
+              having greate people , partners, and clients who make a difference
+              to the world.
+            </p>
+          </div>
+        </div>
+        <div class="visons_container">
+          <h1 class="vision_heading">Our Vision</h1>
+          <div class="logo_text_vison">
+            <img src="../../Assets/images/aboutus-our-vision.jpg" />
+            <p>
+              To the priority of the organizations require process efficiency to
+              help them leverage the business transformation journey.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="leadership">
+        <h1 class="headng_leadership">Leadership Profile</h1>
+        <p class="leadership_p">
+          In the dynamic landscape of our digital platform , a robust and
+          visionary leadership team stands at the helm, steering our
+          organization towards innovation, growth, and excellence. Our
+          leadership embodies a diverse array of skills , experience , and
+          expertise , synergistically working together to drive our mission
+          forward. Let's delve into the key members of our leadership team.
+        </p>
+      </div>
+      <div class="key_Customer">
+        <h1 class="key_Customer_heading">Key Customers</h1>
+        <div class="reel_of_image">
+          <div class="film-strip">
+            <div class="film-reel">
+              <div class="border"></div>
+              <div class="carousel">
+                <div class="carousel-item">
+                  <img
+                    src="../../Assets/images/key-customers-1.jpg"
+                    alt="Image 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../../Assets/images/key-customers-2.jpg"
+                    alt="Image 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../../Assets/images/key-customers-3.jpg"
+                    alt="Image 3"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../../Assets/images/key-customers-4.jpg"
+                    alt="Image 4"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../../Assets/images/key-customers-5.jpg"
+                    alt="Image 5"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../../Assets/images/key-customers-6.jpg"
+                    alt="Image 6"
+                  />
+                </div>
+              </div>
+              <div class="border"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <iframe
+          src="../shared/footer.html"
+          frameborder="0"
+          width="100%"
+          height="300"
+        ></iframe>
+      </div>
+    </div>
+    <script>
+      const filmReel = document.querySelector(".film-reel");
+      const carouselItems = document.querySelectorAll(".carousel-item");
+      const filmReelWidth =
+        carouselItems.length * (carouselItems[0].offsetWidth + 4);
+      filmReel.style.width = `${filmReelWidth}px`;
+    </script>
+  </body>
+</html>

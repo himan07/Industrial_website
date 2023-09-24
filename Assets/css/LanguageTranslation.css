@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif !important;
+
+}
+
+.language_container {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.img_container {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.img_container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img_container h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 500 !important;
+}
+
+.LanguageTranslation_content {
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .img_container {
+        max-width: 90%;
+    }
+
+    .img_container h1 {
+        font-size: 24px;
+    }
+}
