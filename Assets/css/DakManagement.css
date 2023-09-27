@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif !important;
 }
 
-.dak_container{
+.dak_container {
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -31,9 +31,13 @@ body {
     color: white;
     font-size: 3.5rem;
     font-weight: 500 !important;
-    width:  80% !important;
+    width: 80% !important;
 }
 
-.dak_management{
+.dak_management {
     padding: 20px !important;
+}
+
+ul li {
+    margin-top: 10px;
 }
