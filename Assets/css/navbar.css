@@ -33,6 +33,13 @@ body {
     font-size: 18px;
 }
 
+.dropdown_icon{
+    height: 10px !important;
+}
+
+.nav_logo{
+    height: 60px !important;
+}
 
 .menu-toggle {
     display: none;

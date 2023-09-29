@@ -10,7 +10,6 @@ body {
   grid-gap: 20px;
   background-color: rgb(56, 76, 100);
   height: calc(100vh-10);
-
   padding-bottom: 30px !important;
 }
 
