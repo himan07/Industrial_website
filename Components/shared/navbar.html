@@ -8,7 +8,11 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
     />
-    <title>Costacloud an Appolo Computers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Costacloud</title>
   </head>
   <body>
     <nav class="navbar">
@@ -40,12 +44,38 @@
             >About Us</a
           >
         </li>
-        <li>
-          <a href="#" class="nav_items"
-            >Solutions
-            <img src="../../Assets/images/dropdown.png" class="dropdown_icon" />
-          </a>
+        <li class="nav-item dropdown">
+          <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="true">Solutions</a>
+          <div class="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="row">
+              <div class="col-md-6">
+                <a class="dropdown-item" href="#" onclick="showSubItems('action')" style="font-size: 0.9rem;">ARTIFICIAL INTELLIGENCE</a>
+                <a class="dropdown-item" href="#" onclick="showSubItems('anotherAction')" style="font-size: 0.9rem;margin-top: 10px;">DEVOPS</a>               
+                <a class="dropdown-item" href="#" onclick="showSubItems('anotherAction')" style="font-size: 0.9rem;margin-top: 10px;">CLOUD ENABLEMENT SERVICES</a>               
+                <a class="dropdown-item" href="#" onclick="showSubItems('anotherAction')" style="font-size: 0.9rem;margin-top: 10px;">EGOVERMENT SERVICES</a>               
+                <a class="dropdown-item" href="#" onclick="showSubItems('anotherAction')" style="font-size: 0.9rem;margin-top: 10px;">CONTENT MANAGEMENT</a>               
+                <a class="dropdown-item" href="#" onclick="showSubItems('anotherAction')" style="font-size: 0.9rem;margin-top: 10px;">ENTERPRISE SOLUTION</a>               
+              </div>
+              <div class="col-md-6">
+                <div id="actionSubItems" class="submenu">
+                  <a class="dropdown-item" href="#" style="font-size: 0.9rem;" onclick="loadPage('generativeai')">GENERATIVE AI</a>
+                  <a class="dropdown-item" href="#" style="font-size: 0.9rem;margin-top: 10px;" onclick="loadPage('vision')">VISION AI</a>
+                  <a class="dropdown-item" href="#" style="font-size: 0.9rem;margin-top: 10px;" onclick="loadPage('sentiment')">SENTIMENT ANALYSIS</a>
+                  <a class="dropdown-item" href="#" style="font-size: 0.9rem;margin-top: 10px;" onclick="loadPage('textSummarize')">TEXT SUMMARIZATION</a>
+                  <a class="dropdown-item" href="#" style="font-size: 0.9rem;margin-top: 10px;" onclick="loadPage('textClassi')">TEXT CLASSIFICATION</a>
+                  <a class="dropdown-item" href="#" style="font-size: 0.9rem;margin-top: 10px;"  onclick="loadPage('language')">LANGUAGE TRANSLATION</a>
+                  <a class="dropdown-item" href="#" style="font-size: 0.9rem;margin-top: 10px;"  onclick="loadPage('chatbot')">CHATBOT DEVELOPMENT </a>
+                </div>
+                <div id="anotherActionSubItems" class="submenu">
+                  <a class="dropdown-item" href="#">Sub-Item 1 (Another Action)</a>
+                  <a class="dropdown-item" href="#">Sub-Item 2 (Another Action)</a>
+                  <a class="dropdown-item" href="#">Sub-Item 2 (Another Action)</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
+        
         <li>
           <a href="#" class="nav_items"
             >Resources
@@ -84,6 +114,79 @@
                 content.innerHTML = "<h1>error while loading the page</h1>";
               });
             break;
+            case "generativeai":
+            fetch("ArtificialIntelligence/GenerativeAi.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "vision":
+            fetch("ArtificialIntelligence/visionAi.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "sentiment":
+            fetch("ArtificialIntelligence/sentimentalAnalysis.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "textSummarize":
+            fetch("ArtificialIntelligence/TextSum.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "textClassi":
+            fetch("ArtificialIntelligence/textClassification.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "language":
+            fetch("ArtificialIntelligence/languageTranslation.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "chatbot":
+            fetch("ArtificialIntelligence/chatbotDev.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            
+            
+           
           case "contact":
             content.innerHTML =
               "<h1>Contact Us</h1><p>Contact information goes here.</p>";
@@ -94,11 +197,28 @@
             break;
         }
       }
+
       document.addEventListener("DOMContentLoaded", function () {
         loadPage("homePage");
       });
+
+    function showSubItems(itemType) {
+    const actionSubItems = document.getElementById('actionSubItems');
+    const anotherActionSubItems = document.getElementById('anotherActionSubItems');
+    
+    if (itemType === 'action') {
+      actionSubItems.style.display = 'block';
+      anotherActionSubItems.style.display = 'none';
+    } else if (itemType === 'anotherAction') {
+      actionSubItems.style.display = 'none';
+      anotherActionSubItems.style.display = 'block';
+    }
+  }
+
+  // Initially hide the "Another action" sub-items
+  document.getElementById('anotherActionSubItems').style.display = 'none';
+
     </script>
-   
     </div>
   </body>
 </html>
