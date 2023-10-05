@@ -5,20 +5,14 @@ body {
 }
 
 .container {
-    height: 100vh;
+    height: auto;
     max-width: 100% !important;
+    width: 100% !important;
     background-color: #fff;
 }
 
-.homepage_banner {
-    text-align: center;
-    padding: 0;
-}
 
-.homepage {
-    width: 100%;
-    height: auto;
-}
+
 
 @media (max-width: 767px) {
     .homepage_banner {
@@ -26,13 +20,14 @@ body {
     }
 
     .homepage {
-        width: 100%;
+        width: 100% !important;
     }
 }
 
 @media (min-width: 768px) {
     .homepage {
         max-width: 100%;
+        width: 100% !important;
     }
 }
 

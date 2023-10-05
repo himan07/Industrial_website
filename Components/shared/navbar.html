@@ -94,7 +94,13 @@
                   <a class="dropdown-item" href="#"  onclick="loadPage('TeamChat')">TeamChat</a>
                 </div>
                 <div id="enterprise" class="submenu">
-
+                  <a class="dropdown-item" href="#"  onclick="loadPage('procure')">ProcurePay</a>
+                  <a class="dropdown-item" href="#"  onclick="loadPage('Vedor')">Vedor Portal</a>
+                  <a class="dropdown-item" href="#"  onclick="loadPage('invoice')">Invoice Management System</a>
+                  <a class="dropdown-item" href="#"  onclick="loadPage('emplOnbording')">Employee Onboarding & Offboarding</a>
+                  <a class="dropdown-item" href="#"  onclick="loadPage('bpa')"> Business Process Automation</a>
+                  <a class="dropdown-item" href="#"  onclick="loadPage('rpa')"> Robotic Process Automation
+                  </a>
                 </div>
               </div>
             </div>
@@ -410,9 +416,69 @@
                 content.innerHTML = "<h1>error while loading the page</h1>";
               });
             break;
+            case "procure":
+            fetch("EnterpriseSolution/ProcurePay.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "Vedor":
+            fetch("EnterpriseSolution/Vendor.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "invoice":
+            fetch("EnterpriseSolution/InvoiceManagement.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "emplOnbording":
+            fetch("EnterpriseSolution/emplOnbording.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "bpa":
+            fetch("EnterpriseSolution/buisnessProcess.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "rpa":
+            fetch("EnterpriseSolution/roboticsProcess.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
             
             
-           
+          
           case "contact":
             content.innerHTML =
               "<h1>Contact Us</h1><p>Contact information goes here.</p>";
@@ -448,8 +514,6 @@
     });
 });
 
-
- 
     if (itemType === 'ai_items') {
       ai_items.style.display = 'block';
       devops.style.display = 'none';
@@ -499,7 +563,6 @@
       enterprise.style.display='block';
     }
   }
-
     document.getElementById('devops').style.display = 'none';
     document.getElementById("cloud_enablement").style.display='none';
     document.getElementById("eGov").style.display='none';
