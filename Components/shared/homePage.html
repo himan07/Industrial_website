@@ -3,18 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Costacloud</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.5/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Homepage</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
     />
-    <link rel="stylesheet" href="/Assets/css/index.css" />
+    <link rel="stylesheet" href="/Assets/css/homePage.css" />
   </head>
   <body>
     <div class="container">
       <section class="homepage_banner">
-        <img class="homepage" src="/Assets/images/homepage.jpg" alt="" />
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="/Assets/images/homepage.jpg"
+                class="d-block w-100"
+                alt="First slide"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <p>
+                  Let's get started with your <br /><span
+                    style="font-size: 3.5rem"
+                    >Digital Transformation Journey</span
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/Assets/images/homepage.jpg"
+                class="d-block w-100"
+                alt="Second slide"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <p>
+                  Sustanability at the Heart of <br /><span
+                    style="font-size: 3.5rem"
+                    >Technological Excellence</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+
       <section class="about_costacloud">
         <div class="text_container">
           <h1 style="font-size: 30px">About Costacloud</h1>
@@ -46,96 +98,68 @@
           />
         </div>
       </section>
-      <section class="saved_tree">
-        <img
-          src="/Assets/images/homepage-saves-trees.jpg"
-          alt=""
-          class="saved_tree_images"
-        />
-        <div class="tree_saved_text">
-          <h1 style="color: #f0c22c" style="font-size: 30px">TREES SAVED</h1>
-          <p class="p_2">
-            Trees play a significant role in preserving our universe by reducing
-            carbon footprints by CO2 emissions and increasing air oxygen levels
-            in the face of the looming risks of climate change throughout the
-            globe. According to studies , recycling 1 ton of paper prevents the
-            destruction of 13 trees.
-          </p>
-          <p class="p_2">
-            The growing use of various electronic documents , which protects us
-            from pollution and global warming, facillitates the move away from
-            paper.
-          </p>
+      <section class="resources_managed_section">
+        <div class="images">
+          <img
+            src="/Assets/images/homepage-saves-trees.jpg"
+            alt=""
+            class="saved_tree_images"
+          />
+        </div>
+        <div class="resources">
+          <div class="tree_saved_content">
+            <h1 style="color: #f0c22c; font-size: 30px">TREES SAVED</h1>
+            <p>
+              Trees play a significant role in preserving our universe by
+              reducing carbon footprints by CO2 emissions and increasing air
+              oxygen levels in the face of the looming risks of climate change
+              throughout the globe. According to studies, recycling 1 ton of
+              paper prevents the destruction of 13 trees.
+              <br />
+              The growing use of various electronic documents, which protects us
+              from pollution and global warming, facilitates the move away from
+              paper.
+            </p>
+          </div>
+          <div class="time_saved_content">
+            <h1 style="color: #469e94; font-size: 30px">TIME SAVED</h1>
+            <p>
+              While it often takes 2 seconds to get information from an <br />
+              electronic document like pdf, it typically takes to do it for
+              papers. On devices, retrieving electronic documents is simple
+              thanks to key indexes like "date, keyword" or other defined
+              content. It helps people be more productive and save a lot of
+              time. By transmitting<br />
+              revised agreements, purchase agreements, legal documents, and
+              other documents digitally to clients or colleagues, you can also
+              save time.
+            </p>
+          </div>
+          <div class="datamanaged_content">
+            <h1 style="color: #b30000; font-size: 30px">DATA MANAGED</h1>
+            <p>
+              In today's fast-paced digital landscape, managing data effectively
+              is paramount to success. Our solutions are your ultimate partner
+              in transforming data chaos into streamlined efficiency. Currently,
+              we are managing 6 petabytes of data, revolutionizing the way you
+              handle it, offering a comprehensive suite of tools designed to
+            </p>
+          </div>
+          <div class="security_content">
+            <h1 style="color: #006880; font-size: 30px">SECURITY</h1>
+            <p>
+              A paperless office provides a range of positive aspects of
+              security offering enhanced access control, stronger
+              authentication, encryption, accountability, compliance monitoring,
+              and efficient incident response. Leveraging these advantages
+              through proper implementation and continuous vigilance can
+              significantly bolster an organization's security posture in the
+              digital age.
+            </p>
+          </div>
         </div>
       </section>
-      <section class="saved_tree">
-        <img
-          src="/Assets/images/homepage-saves-time.jpg"
-          alt=""
-          class="saved_tree_images"
-        />
-        <div class="tree_saved_text">
-          <h1 style="color: #469e94" style="font-size: 30px">TIME SAVED</h1>
-          <p class="p_2" style="font-weight: bold">
-            While it often takes 2 seconds to get information from an <br />
-            electronic document like pdf , it typically takes to do it for
-            papers.
-          </p>
-          <p class="p_2">
-            On devices, retrieving electronic documents is simple thanks to
-            <br />
-            key indexes like "date, keyword" or other defined content. It helps
-            <br />
-            people be more productive and save a lot of time. By transmitting<br />
-            revised agreements, purchase agreements, legal documents, and other
-            documents digitally to clients pr colleagues, you can also save
-            time.
-          </p>
-        </div>
-      </section>
-      <section class="saved_tree">
-        <img
-          src="/Assets/images/homepage-data-managed.jpg"
-          alt=""
-          class="saved_tree_images"
-        />
-        <div class="tree_saved_text">
-          <h1 style="color: #b30000" style="font-size: 30px">DATA MANAGED</h1>
-          <p class="p_2">
-            In todays fast-paced digital landscape, managing data effectively
-            <br />
-            is paramount to success . Our solutions are your ultimate partner in
-            <br />
-            transfroming data chaos into streamlined efficiency. Currently we<br />
-            managing 6 petabytes of data , revolutionizing the way you<br />
-            handle it, offering a comprehensive suite of tools designed to
-            simply, organize, and optimize your workflow.
-          </p>
-        </div>
-      </section>
-      <section class="saved_tree">
-        <img
-          src="/Assets/images/homepage-security.jpg"
-          alt=""
-          class="saved_tree_images"
-        />
-        <div class="tree_saved_text">
-          <h1 style="color: #006880" style="font-size: 30px">SECURITY</h1>
-          <p class="p_2">
-            A paperless office provides a range of positive aspects of security
-            <br />
-            offering enhanced access control , stronger authentication,
-            <br />
-            encryption , accountability, complience monitoring, and efficient
-            incident response.
-          </p>
-          <p class="p_2">
-            Leveraging these advantages through proper implementation and
-            continuous vigilance can significantly bolster an organization's
-            security posture in digital age.
-          </p>
-        </div>
-      </section>
+
       <section class="testimonials">
         <div class="card-container">
           <div class="grid_1">
@@ -210,5 +234,46 @@
         ></iframe>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelector(".images");
+        const headings = document.querySelectorAll(".resources > div > h1");
+        let currentHeadingIndex = 0;
+
+        
+        const updateImage = () => {
+          const scrollY = window.scrollY;
+          alert("working")
+          let newHeadingIndex = currentHeadingIndex;
+
+          headings.forEach((heading, index) => {
+            const headingTop = heading.offsetTop;
+
+            if (scrollY >= headingTop) {
+              newHeadingIndex = index;
+            }
+          });
+
+          if (newHeadingIndex !== currentHeadingIndex) {
+            currentHeadingIndex = newHeadingIndex;
+
+            const imagesSrc = [
+              "/Assets/images/homepage-saves-trees.jpg",
+              "/Assets/images/homepage-saves-time.jpg",
+              "/Assets/images/homepage-data-managed.jpg",
+              "/Assets/images/homepage-security.jpg",
+            ];
+
+            images.querySelector(".saved_tree_images").src =
+              imagesSrc[currentHeadingIndex];
+          }
+        };
+
+        // Initial update
+        updateImage();
+        // Listen to scroll events
+        window.addEventListener("scroll", updateImage);
+      });
+    </script>
   </body>
 </html>

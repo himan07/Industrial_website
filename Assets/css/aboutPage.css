@@ -8,6 +8,7 @@ body {
     max-width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
+    padding:0 !important;
 }
 
 .about_image_container {
@@ -20,12 +21,13 @@ body {
     height: auto;
 }
 
-.content_container {
+/* .content_container {
     padding: 0 20px !important;
-}
+} */
 
 .text_para_costa {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    padding: 20px !important;
 }
 
 section {
