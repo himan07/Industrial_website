@@ -1,149 +1,151 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif !important;
 }
 
 .container {
-    max-width: 100%;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding:0 !important;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 !important;
 }
 
 .about_image_container {
-    max-width: 100%;
-    text-align: center;
+  max-width: 100%;
+  text-align: center;
 }
 
 .about_image_container img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-/* .content_container {
-    padding: 0 20px !important;
-} */
-
 .text_para_costa {
-    /* font-size: 1.2rem; */
-    padding: 20px !important;
+  padding: 20px !important;
+  /* font-size: 1.1rem; */
+  line-height: 1.5;
 }
 
 section {
-    display: grid;
-    padding: 20px;
-    background-color: rgb(223, 223, 223);
+  display: grid;
+  padding: 20px;
+  background-color: rgb(223, 223, 223);
 }
 
-.mission_container,
-.visons_container {
-    align-items: center;
-    text-align: center;
+.mission_container {
+  max-width: 100% !important;
+  display: flex;
+  justify-content: space-around;
+}
+
+.p_mission {
+  max-width: 30em;
+  width: 26em;
+  margin-top: 10px;
+  /* font-size: 1.2rem !important; */
+  word-wrap: break-word;
+}
+
+.partner{
+    padding: 20px;
+}
+
+.image_ {
+  margin-top: 15px;
 }
 
 .logo_text_mission,
 .logo_text_vison {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    gap: 30px;
-    font-size: 1.2rem;
+  text-align: left;
 }
 
 .vision_heading,
 .mission_heading {
-    text-align: left;
-    position: relative;
+  text-align: left;
+  position: relative;
 }
 
 .vision_heading::after,
 .mission_heading::after,
 .headng_leadership::after,
 .key_Customer_heading::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 6px;
-    background-color: rgb(255, 166, 0);
-    position: absolute;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 6px;
+  background-color: rgb(255, 166, 0);
+  position: absolute;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .leadership {
-    max-width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: left;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 .headng_leadership {
-    font-size: 24px;
-    margin-bottom: 10px;
-    position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 .leadership_p {
-    font-size: 1.2rem !important;
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
-/* .carousel-item:not(:last-child) {
-    border-right: 4px solid black;
-} */
-
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-    .leadership {
-        max-width: 80%;
-        margin: 0 auto;
-    }
+  .leadership {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 
-    h1 {
-        font-size: 28px;
-    }
+  h1 {
+    font-size: 28px;
+  }
 
-    p {
-        font-size: 18px;
-    }
+  p {
+    font-size: 18px;
+  }
 }
 
 .key_Customer {
-    max-width: 100%;
-    padding: 20px;
-    /* background-color: rgb(223, 223, 223); */
+  max-width: 100%;
+  padding: 20px;
+  /* background-color: rgb(223, 223, 223); */
 }
 
 .film-strip {
-    position: relative;
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
-    padding: 20px;
-    /* background-color: white; */
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 20px;
+  /* background-color: white; */
 }
 
 .film-reel {
-    position: relative;
-    display: flex;
-    /* border: 4px solid black; */
-    animation: film-strip-animation 20s linear infinite;
-    animation-play-state: running;
+  position: relative;
+  display: flex;
+  /* border: 4px solid black; */
+  animation: film-strip-animation 20s linear infinite;
+  animation-play-state: running;
 }
 
 @keyframes film-strip-animation {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
-
 
 /* .border {
     width: 4px;
@@ -151,24 +153,24 @@ img {
 } */
 
 .carousel {
-    display: flex;
+  display: flex;
 }
 
 .carousel-item {
-    flex-shrink: 0;
-    margin-right: 4px;
-    overflow: hidden;
-    width: 200px;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex-shrink: 0;
+  margin-right: 4px;
+  overflow: hidden;
+  width: 200px;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-item img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: flex;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: flex;
 }

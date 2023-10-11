@@ -11,23 +11,6 @@ body {
   padding: 0 !important;
 }
 
-@media (max-width: 767px) {
-  .homepage_banner {
-    padding: 10px;
-  }
-  .homepage {
-    width: 100% !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .homepage {
-    max-width: 100% !important;
-    width: 100% !important;
-    margin: 0 !important;
-  }
-}
-
 .about_costacloud {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -47,12 +30,12 @@ body {
   margin-right: 20px;
 }
 
-.p_1 {
-  font-size: 1.2rem;
+.text_container h1 {
+  font-size: x-large;
 }
 
-.p_2 {
-  font-size: 1.2rem;
+.text_container p {
+  font-size: 16px;
 }
 
 .marketing_logo {
@@ -61,54 +44,11 @@ body {
   margin-top: 30px;
 }
 
-@media (max-width: 767px) {
-  .about_costacloud {
-    grid-template-columns: 1fr;
-  }
-
-  .marketing_logo {
-    grid-column: 1 / 2;
-    margin-top: 20px;
-  }
-
-  .homepage_number {
-    max-width: 100%;
-    height: auto;
-    min-width: 200px;
-  }
-}
-
-@media (min-width: 768px) {
-  .text_container {
-    font-size: 15px;
-  }
-}
-
-
-
-
-
-.saved_tree_images {
-  max-width: 100%;
-  height: auto;
-  min-width: 200px;
-  margin-top: 30px;
-}
-
-.tree_saved_text {
-  padding: 20px;
-  text-align: left !important;
-  margin-right: 20px;
-}
-
-@media (max-width: 768px) {
-  .saved_tree {
-    grid-template-columns: 1fr;
-  }
-
-  .tree_saved_text {
-    padding: 10px;
-  }
+.tree_saved_content,
+.time_saved_content,
+.datamanaged_content,
+.security_content p {
+  font-size: 16px !important;
 }
 
 /* Testimonials */
@@ -135,8 +75,8 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 33.5%;
   left: 5%;
+  top: 37%;
 }
 
 .entity_codes {
@@ -146,7 +86,12 @@ body {
   color: white;
   line-height: 40px;
   position: relative;
-  top: 5px !important;
+  top: 6px;
+}
+
+.p {
+  word-wrap: break-word;
+  max-width: 16em;
 }
 
 .card-container {
@@ -154,8 +99,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 10px;
+  margin: auto;
 }
 
 .testimonial-card {
@@ -190,37 +134,160 @@ body {
   text-align: left !important;
 }
 
-@media screen and (min-width: 800px) {
-  .card-container {
-    grid-template-columns: repeat(4, 1fr);
+.world_map {
+  text-align: center;
+  padding: 20px;
+}
+
+.world_map h1 {
+  font-size: 24px;
+}
+
+.world_map img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-55%);
+  left: 1rem;
+  right: 0;
+  text-align: left;
+  padding: 20px;
+  color: #fff;
+}
+
+.carousel-caption h1 {
+  font-size: 42px !important;
+}
+.carousel-caption p {
+  font-size: 30px !important;
+  font-weight: 200 !important;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-caption button {
+  background-color: #061efa;
+  color: #fff;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 15px 0px;
+}
+
+.resources {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  height: auto !important;
+  overflow-y: auto !important;
+  height: 300px !important;
+  padding: 20px;
+}
+
+.resources::-webkit-scrollbar {
+  width: 0px;
+}
+
+.resources::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.saved_tree_images {
+  max-width: 100%;
+  height: 80% !important;
+  min-width: 200px;
+  margin-top: 30px;
+}
+
+.resources > div {
+  padding: 30px;
+  margin-top: 10px !important;
+}
+
+.resources_managed_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .about_costacloud {
+    grid-template-columns: 1fr;
   }
 
-  .grid_2 img,
-  .grid_3 img,
-  .grid_4 img {
+  .marketing_logo {
+    grid-column: 1 / 2;
+    margin-top: 20px;
+  }
+
+  .homepage_number {
     max-width: 100%;
     height: auto;
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .text_container {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .saved_tree {
+    grid-template-columns: 1fr;
   }
 
-  .grid_text {
-    width: auto;
+  .tree_saved_text {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .homepage_banner {
+    padding: 10px;
+  }
+  .homepage {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .homepage {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .world_map h1 {
+    font-size: 20px;
   }
+}
 
-  .grid_2 img,
-  .grid_3 img,
-  .grid_4 img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .grid_text {
-    height: auto;
+@media screen and (max-width: 480px) {
+  .world_map h1 {
+    font-size: 18px;
   }
 }
 
@@ -241,96 +308,36 @@ body {
   }
 }
 
-.world_map {
-  text-align: center;
-  padding: 20px;
-}
-
-.world_map h1 {
-  font-size: 24px;
-}
-
-.world_map img {
-  max-width: 100%;
-  height: auto;
-}
-
 @media screen and (max-width: 768px) {
-  .world_map h1 {
-    font-size: 20px;
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-}
 
-@media screen and (max-width: 480px) {
-  .world_map h1 {
-    font-size: 18px;
-  }
-}
-
-.carousel-caption {
-    position: absolute;
-    top: 55%;
-    transform: translateY(-55%);
-    left: 1rem;
-    right: 0;
-    text-align: left;
-    padding: 20px;
-    color: #fff;
-  }
-  
-.carousel-caption h1{
-    font-size: 3.5rem !important;
-}
-.carousel-caption p{
-    font-size: 2.2rem !important;
-    font-weight: 200 !important;
-}
-
-  .carousel-inner {
-    position: relative;
-  }
-  
-  .carousel-item {
-    position: relative;
-  }
-  
-  .carousel-item img {
+  .grid_2 img,
+  .grid_3 img,
+  .grid_4 img {
     max-width: 100%;
     height: auto;
   }
 
-  
-  .carousel-caption button {
-    background-color: #061efa;
-    color: #fff;
-    padding: 5px 20px;
-    border: none;
-    cursor: pointer;
-    margin: 15px 0px;
+  .grid_text {
+    height: auto;
   }
-  
+}
 
-  .resources {
-    display: flex;
-    flex-direction: column;
-    gap: 100px; 
-    height: 600px !important;
-    overflow-y: auto !important;
+@media screen and (min-width: 800px) {
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .resources > div {
-    padding: 30px; 
-    margin-top: 10px !important;
+  .grid_2 img,
+  .grid_3 img,
+  .grid_4 img {
+    max-width: 100%;
+    height: auto;
   }
 
-  .resources_managed_section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    justify-content: center;
-    padding: 30px;
-    margin: 0 auto;
-    margin-top: 20px;
-
+  .grid_text {
+    width: auto;
   }
-  
+}
