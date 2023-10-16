@@ -14,15 +14,26 @@
     <title>Costacloud</title>
   </head>
   <body>
+    <div class="strip" >
+      <div class="logo_mail_container">
+       <img src="/Assets/images/email.png" height="20" width="20"/>
+        <h1 class="costacloud_mail">sales@costacloud.com</h1>
+      </div>
+      <div class="contact" >
+        <h1 class="business">Contact us for Business Needs: <span>+91-9090979741 , +91-9090050518</span></h1>
+        <div class="logos" style="padding: 5px; margin-right: 10px;">
+          <img src="/Assets/images/ico-linkedin.png" alt="image is not found"  height="15" width="15"/>
+          <img src="/Assets/images/ico-fb.png" alt="image is not  found"   height="15" style="margin-left: 20px;"/>
+        </div>
+      </div>
+    </div>
     <nav class="navbar">
       <div class="logo">
-        <a href="#">
           <img
-            src="../../Assets/images/logo-header.png"
+            src="/Assets/images/logo.png"
             height="60"
             class="nav_logo"
           />
-        </a>
       </div>
       <ul class="nav-links" style="margin-top: 20px !important;">
         <li>
@@ -48,7 +59,7 @@
           <div class="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDropdown">
             <div class="row">
               <div class="col-md-6">
-                <a class="dropdown-item first-item row" href="#" onclick="showSubItems('ai_items');"style="color: #008e97;">ARTIFICIAL INTELLIGENCE</a>
+                <a class="dropdown-item first-item row" href="#" onclick="showSubItems('ai_items');"style="color: #325877;">ARTIFICIAL INTELLIGENCE</a>
                 <a class="dropdown-item row" href="#" onclick="showSubItems('devops')" >DEVOPS</a>               
                 <a class="dropdown-item row" href="#" onclick="showSubItems('cloud_enablement')">CLOUD ENABLEMENT SERVICES</a>               
                 <a class="dropdown-item row" href="#" onclick="showSubItems('eGov')" >EGOVERMENT SERVICES</a>               
@@ -517,7 +528,7 @@ $(document).ready(function () {
     $('.dropdown-item').click(function() {
         $('.dropdown-item').css('color', '');
         $('.dropdown-item').css('background-color', '');
-        $(this).css('color', '#008e97');
+        $(this).css('color', '#325877');
         $(this).css('background-color', '#f2f2f2');
     });
 });
@@ -613,10 +624,15 @@ setTimeout(() => {
   });
 }, 1000);
 
+// see more card
+           function toggleText(button) {
+            const cardText = button.previousElementSibling;
+            cardText.style.maxHeight = cardText.style.maxHeight === 'none' ? '90px' : 'none';
+            button.textContent = button.textContent === 'See more' ? 'See less' : 'See more';
+            }
 
-  
-    
     </script>
     </div>
   </body>
 </html>
+

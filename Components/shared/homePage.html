@@ -8,10 +8,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&family=Roboto+Slab:wght@100&family=Roboto:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/Assets/css/homePage.css" />
@@ -71,21 +75,21 @@
 
       <section class="about_costacloud">
         <div class="text_container">
-          <h1>About Costacloud</h1>
-          <p>
+          <h1 class="about_heading">About Costacloud</h1>
+          <p class="para_about">
             Costacloud is empowring envoironmental and social changes through
             the flagship initiatives of Digital india and make in india. With
             our long-term commitment to achieve complience and security of
             technological aspects we are even contributing to sustainability in
             various ways.
           </p>
-          <p>
+          <p style="font-size: 17px !important">
             Our array of eGovernance solution has led to a more efficient,
             transparent, and citizen-centric government, strengthening the
             relationship between citizens and the state promoting overall
             socio-economic development.
           </p>
-          <p>
+          <p style="font-size: 17px !important">
             Our collaboration with the partners and clients has helped them
             address and create a difference to some of the most pressing
             challenges of the world. Since inception, we have always prioritized
@@ -168,29 +172,34 @@
       </section>
 
       <section class="testimonials">
+        <div class="grid_1">
+          <h1 class="heading_testimonial" >
+            Testimonials-:</h1>
+          <p class="p">
+           Costacloud is helping buisnesses with the Full Lifecycle of their
+            Content and Processes. From helping them move from a paper based<br/>
+           <span> buisness process to a full paperless office to providing Buisness
+            Analytics on their content and process to helping</span> <br/>them save costs
+            by moving them to the Cloud to providing Buisness Continuity.
+          </p><br/>
+         
+        </div>
         <div class="card-container">
-          <div class="grid_1">
-            <h1 style="text-align: left; position: relative; left: -10px;">Testimonials</h1>
-            <p style=" text-align: left" class="p">
-              Costacloud is helping buisnesses with the Full Lifecycle of their
-              Content and Processes. From helping them move from a paper based
-              buisness process to a full paperless office to providing Buisness
-              Analytics on their content and process to helping them save costs
-              by moving them to the Cloud to providing Buisness Continuity.
-            </p>
-          </div>
           <div class="grid_2">
             <img src="/Assets/images/homepage-testimonial-1.jpg" />
             <div class="icon">
               <span class="entity_codes">&#x0312; &#x0312;</span>
             </div>
-            <div class="grid_text">
-              <p class="text_inside_card">
-                I would never have expected a startup to have more insight into
-                document Management system as compared to the Big 4...
-              </p>
-              <h4 class="heading_card">Umesh Vashihta</h4>
-              <p class="text_inside_card">CIO, Unitech</p>
+            <div class="card  grid_text">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 15px;">
+                  I would never have expected a Startup to have more insight
+                  into Document Management Systems as compared to the Big 4
+                  Consulting Companies. CostaCloud proved me wrong. They really
+                  know Content Management. I would highly recommend them.
+                </p>
+                <a href="#" class="see-more" onclick="toggleText(this); return false;">See more</a>
+              </div>
             </div>
           </div>
           <div class="grid_3">
@@ -198,33 +207,75 @@
             <div class="icon">
               <span class="entity_codes">&#x0312; &#x0312;</span>
             </div>
-            <div class="grid_text">
-              <p class="text_inside_card">
-                We engaged CostaCloud for our VDI requirement . They are through
-                professionals, were able to match are tough ... deadlines....and
-                yet
-              </p>
-              <h4 class="heading_card">Aditya Gupta</h4>
-            </div>
+            <div class="card grid_text">
+              <div class="card-body">
+                  <p class="card-text" style="font-size: 15px;">
+                    We engaged CostaCloud for our VDI requirements. They are through professionals, were able to match are tough deadlines and yet keep the smile on their face.
+                  </p>
+                  <a href="#" class="see-more" onclick="toggleText(this); return false;">See more</a>
+              </div>
+          </div>
+          
           </div>
           <div class="grid_4">
             <img src="/Assets/images/homepage-testimonial-3.jpg" />
             <div class="icon">
               <span class="entity_codes">&#x0312; &#x0312;</span>
             </div>
-            <div class="grid_text">
-              <p class="text_inside_card">
-                CostaCloud was able to provide us Buisness Continuity Solution
-                that fit our needs. We had been struggling for the last...
-              </p>
-              <p style="text-align: left">Rockwell Automation</p>
+            <div class="card w-90 mb-3 grid_text">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 15px;">
+                  CostaCloud was able to provide us Business Continuity Solution that fit our needs. We had been struggling for the last 4-5 years with our Business Continuity needs.
+                </p>
+                <a href="#" class="see-more" onclick="toggleText(this); return false;">See more</a>
+              </div>
             </div>
+          </div>
+          <div class="grid_4">
+            <img src="/Assets/images/nhb.png" />
+            <div class="icon">
+              <span class="entity_codes">&#x0312; &#x0312;</span>
+            </div>
+            <div class="card w-90 mb-3 grid_text">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 15px;">
+                  We were continuously struggling in our day-to-day business process which hampered our
+                  deliverables to a greater extent.
+                  Now &quot;I can&#39;t express enough how much our business has transformed since partnering with
+                  CostaCloud. It&#39;s like having a dedicated team of efficiency experts working around the clock to
+                  supercharge our business operations. From day one, the impact was noticeable, and it has only
+                  gotten better.
+                </p>
+                <a href="#" class="see-more" onclick="toggleText(this); return false;">See more</a>
+              </div>
+            </div>
+          </div>
+          <div class="grid_4">
+            <img src="/Assets/images/ongc.png" />
+            <div class="icon">
+              <span class="entity_codes">&#x0312; &#x0312;</span>
+            </div>
+            <div class="card w-90 mb-3 grid_text">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 15px;">
+                  Before embracing Business Automation, our processes were laborious, time-consuming, and prone
+                  to errors. We were struggling to keep up with our competitors and were losing valuable time that
+                  could have been spent on growing our business.
+                  But then, we discovered the Business Automation Services of CostaCloud, and it was a game-
+                  changer.
+                </p>
+                <a href="#" class="see-more" onclick="toggleText(this); return false;">See more</a>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </section>
       <section class="world_map">
-        <h1 style="text-align: left; font-weight: bold;">Our offices around the world</h1>
-        <img src="/Assets/images/homepage-location-banner.jpg" />
+        <h1 class="our_offices">
+          Our offices around the world
+        </h1>
+        <img src="/Assets/images/homepage-location-banner.jpg" style="margin-top: 10px;"/>
       </section>
       <div class="footer">
         <iframe
@@ -235,5 +286,12 @@
         ></iframe>
       </div>
     </div>
+    <script>
+     function toggleText(button) {
+            const cardText = button.previousElementSibling;
+            cardText.classList.toggle('expanded');
+            button.textContent = button.textContent === 'See more' ? 'See less' : 'See more';
+        }
+  </script>    
   </body>
 </html>
