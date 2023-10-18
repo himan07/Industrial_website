@@ -8,10 +8,11 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.3fr;
   grid-gap: 20px;
-  background-color: rgb(56, 76, 100);
-  height: calc(100vh-10);
+  background-color: #325877;
   padding-bottom: 30px !important;
 }
+
+
 
 .first_part {
   grid-column: span 1;

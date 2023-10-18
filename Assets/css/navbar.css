@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif !important;
 }
@@ -32,15 +32,38 @@ body {
 
 
 .strip {
-  background-color: #325877 !important;
+  background-color: #517491 !important;
   height: 40px;
   max-width: 100%;
   width: 100% !important;
   display: flex;
   justify-content: space-between;
   color: white;
+  backdrop-filter: blur(5px) !important; 
   
 }
+
+.strip {
+  background: linear-gradient(45deg, transparent, #517491, transparent);
+  height: 40px;
+  max-width: 100%;
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  animation: shining 2s linear infinite; 
+}
+
+@keyframes shining {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+
 .business{
   font-size: 15px;
   padding: 10px;
