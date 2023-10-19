@@ -631,6 +631,42 @@ setTimeout(() => {
             button.textContent = button.textContent === 'See more' ? 'See less' : 'See more';
             }
 
+
+   // animations
+   document.addEventListener("DOMContentLoaded", function () {
+  const verticalAnimation = document.querySelector(".vertical_animation");
+  const animatedElements = document.querySelectorAll(".top_imgs, .btm_imgs, .clients, .numbers");
+  let animationTriggered = false;
+
+  function animateOnScroll() {
+    if (isElementInViewport(verticalAnimation) && !animationTriggered) {
+      verticalAnimation.classList.add("animated");
+      animatedElements.forEach(element => {
+        element.classList.add("animated");
+      });
+      animationTriggered = true;
+    }
+  }
+
+  // Initially, check if the animation should trigger
+  animateOnScroll();
+
+  // Attach the scroll event listener
+  window.addEventListener("scroll", animateOnScroll);
+});
+
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+// bubble animation
+
+
     </script>
     </div>
   </body>
