@@ -1,7 +1,7 @@
 body {
   margin: 0 !important;
   padding: 0 !important;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 17px !important;
 }
 
@@ -12,6 +12,106 @@ body {
   padding: 0 !important;
 }
 
+.homepage_banner {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  background-image: url("/Assets/images/banner.png");
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.homepage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.heading {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.test_p_ {
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 15px;
+  position: relative;
+  top: -1rem;
+}
+
+.h1_tree_save {
+  font-size: 1.2rem;
+  padding: 12px 13px;
+  border-radius: 20px;
+  font-weight: bold;
+  max-width: 100%;
+  width: 150px;
+  color: #ff3654;
+  background-color: #f7eef0;
+  position: relative;
+  left: -0.5rem;
+}
+
+.h1_time_save {
+  font-size: 1.2rem;
+  padding: 12px 13px;
+  border-radius: 20px;
+  font-weight: bold !important;
+  max-width: 100%;
+  width: 140px !important;
+  color: #00b59a;
+  background-color: #eefcfa;
+  position: relative;
+  left: -0.5rem;
+}
+
+.h1_data_ {
+  font-size: 1.2rem !important;
+  padding: 12px 13px;
+  border-radius: 20px;
+  font-weight: bold !important;
+  max-width: 100%;
+  width: 180px !important;
+  color: #4b3ad1;
+  background-color: #f3f1f8;
+  position: relative;
+  left: -0.5rem;
+}
+
+.security_h1 {
+  font-size: 1.2rem !important;
+  padding: 12px 13px;
+  border-radius: 20px;
+  font-weight: bold !important;
+  max-width: 100%;
+  width: 120px !important;
+  color: #ff9c00;
+  background-color: #f8f0e5;
+  position: relative;
+  left: -0.5rem;
+}
+
+.heading h1 {
+  font-weight: bold !important;
+  font-size: 2.5rem;
+  color: #000000 !important;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 .corousel_h1 {
   text-align: left;
   font-size: 42px !important;
@@ -20,47 +120,39 @@ body {
 }
 
 .line-animation {
-  display: inline-block;
-  animation: move-text 5s linear infinite;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+  top: 20%;
+  left: 8%;
 }
 
-.line-1,
-.line-2 {
-  display: inline-block;
-  opacity: 0;
-  white-space: nowrap;
+.btn_contact {
+  max-width: 100%;
+  width: 20%;
+  padding: 10px;
+  position: relative;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: rgb(255, 115, 0);
+  border: 0px solid rgb(255, 115, 0);
+  color: white;
+  cursor: pointer !important;
 }
 
 .line-1 {
-  animation: move-left 2s forwards;
-  color: #eba834;
+  font-size: 2.5rem !important;
+  font-weight: bolder !important;
+  color: #000000;
+  position: relative;
+  top: 6%;
 }
 
 .line-2 {
-  animation: move-right 2s forwards;
-  animation-delay: 2s;
-}
-
-@keyframes move-left {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes move-right {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  font-size: 2.7rem !important;
+  color: #1616b6;
+  font-weight: bold;
 }
 
 .about_costacloud {
@@ -81,8 +173,7 @@ body {
 }
 
 .para_about {
-  text-align: center;
-  word-wrap: break-word;
+  text-align: center !important;
 }
 
 .homepage_number {
@@ -119,11 +210,23 @@ body {
 }
 
 .about_heading {
-  color: #325877;
+  color: #000000;
   font-weight: bold;
   text-align: center;
-  font-size: 2rem !important;
+  font-size: 2.5rem !important;
   margin-bottom: 20px !important;
+  max-width: 100%;
+  width: 100%;
+}
+.text_container::after {
+  content: "";
+  width: 150px;
+  height: 2px;
+  background-color: #ff3654;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -1rem;
 }
 
 .ab_span {
@@ -131,72 +234,117 @@ body {
   top: 2px !important;
 }
 
-/* .about_heading::after,
-.our_offices::after {
-  content: "";
-  display: block;
-  width: 65px;
-  height: 6px;
-  background-color: rgb(255, 166, 0);
-  position: absolute;
-} */
-
+/* Testimonials */
 .heading_testimonial {
   text-align: center !important;
-  font-size: x-large;
-  color: #325877;
+  font-size: 2.8rem !important;
+  color: #000000;
   font-weight: bold;
 }
 
-/* Testimonials */
-
-.testimonials {
-  background-color: #f2f2f2;
-  padding: 40px;
-  margin-top: 20px;
-  margin-left: 10px;
-  text-align: center;
-}
-
-.grid_2,
-.grid_3,
-.grid_4,
-.grid_5,
-.grid_6 {
-  position: relative;
-}
-
-.icon {
-  height: 40px;
-  width: 40px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  background-color: #325877;
+.testimonial_logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  left: 5%;
-  margin-top: -10px;
+  gap: 80px !important;
+  position: relative;
+  left: 3%;
 }
 
-.entity_codes {
-  font-size: 35px;
-  font-weight: bolder;
-  letter-spacing: 0 !important;
-  color: white;
-  line-height: 40px;
-  position: relative;
-  top: 6px;
+.unitech_logo {
+  max-height: 100vh;
+  height: 150px !important;
 }
+
+.img_test {
+  height: 60px !important;
+  margin-top: 20px;
+}
+
+._items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px !important;
+  max-width: 100%;
+  width: 76% !important;
+  position: relative;
+  top: -3rem;
+}
+
+.static_h1 {
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.static_h1 h1 {
+  font-size: 2.5rem !important;
+  font-weight: bold;
+}
+
+.image_1 {
+  height: 80px !important;
+}
+
+.h1_ {
+  font-size: 1.8rem !important;
+  text-align: left;
+  font-weight: bold;
+}
+
+.bubble_1 {
+  position: relative;
+  left: 56%;
+  top: -2rem;
+}
+
+.p_ {
+  text-align: center !important;
+  position: relative;
+  top: -0.5rem;
+  font-size: 15px;
+}
+
+.testimonials_slide {
+  position: relative;
+  top: -2rem !important;
+}
+
+.left_arrow {
+  width: 40px;
+  height: 40px;
+}
+
+.stars {
+  height: 30px !important;
+  width: 100px;
+}
+
+.arrow_items {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  max-width: 100%;
+  width: 56% !important;
+  position: relative;
+  left: 20%;
+  top: -3rem;
+}
+
+.arrow_b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
 
 .p {
   text-align: center !important;
   font-size: 16px;
   max-width: 100%;
-  /* width: 80%; */
   position: relative;
-  /* left: 5%; */
 }
 
 .card-container {
@@ -287,7 +435,7 @@ body {
 
 .carousel-item {
   max-height: 100vh;
-  height: 88vh !important;
+  height: auto;
 }
 
 .carousel-caption h1 {
@@ -298,13 +446,14 @@ body {
   font-weight: 200 !important;
 }
 
-.carousel-inner {
+/* .carousel-inner {
   position: relative;
-}
+} */
 
-.carousel-item {
+/* .carousel-item {
   position: relative;
-}
+
+} */
 
 .carousel-item img {
   max-width: 100%;
@@ -326,7 +475,7 @@ body {
   gap: 100px;
   height: auto !important;
   overflow-y: auto !important;
-  height: 300px !important;
+  height: 380px !important;
   padding: 20px;
 }
 
@@ -358,6 +507,7 @@ body {
   padding: 30px;
   margin: 0 auto;
   margin-top: 20px;
+  height: 100vh !important;
 }
 
 @media (max-width: 767px) {
@@ -587,22 +737,37 @@ body {
 .clients_section {
   position: relative;
   margin: 20px;
+  max-height: 100vh;
+  height: 70vh;
+}
+
+.heading_text {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin: 20px;
+  position: relative;
+  top: 15%;
+  max-width: 100%;
+  width: 90%;
 }
 
 .cleints_animation {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: 20%;
+  left: 2%;
 }
 
 .client_heading {
   text-align: left;
   font-weight: bold;
-  padding: 30px !important;
   color: #325877;
   font-size: 2rem !important;
   position: relative;
-  top: 35%;
 }
 
 .img_first,
@@ -621,9 +786,9 @@ body {
 }
 
 .icon_2 {
-  height: 140px;
-  width: 140px;
-  margin-top: 20px;
+  height: 125px;
+  width: 125px;
+  margin-top: 10px;
 }
 
 .icon_3 {
@@ -638,26 +803,26 @@ body {
 }
 
 .icon_5 {
-  height: 140px;
-  width: 140px;
+  height: 130px;
+  width: 130px;
 }
 
 .icon_6 {
-  height: 140px;
-  width: 140px;
+  height: 120px;
+  width: 120px;
   position: relative;
-  transform: translate(5%, -50%);
+  transform: translate(5%, -45%);
 }
 
 .icon_7 {
   height: 80px;
   width: 80px;
-  transform: translate(20%, 30%);
+  transform: translate(20%, 50%);
 }
 
 .icon_8 {
-  height: 140px;
-  width: 140px;
+  height: 130px;
+  width: 130px;
   transform: translate(20%, -30%);
 }
 
@@ -689,6 +854,10 @@ body {
   margin-right: 0;
 }
 
+.clients_section {
+  max-width: 100%;
+}
+
 .clients_section::before {
   content: "";
   background-image: url("/Assets/images/Clients/Wave.png");
@@ -698,10 +867,90 @@ body {
   opacity: 0.1;
   position: absolute;
   top: 0;
-  left: 0;
+  /* left: 11%; */
+  max-width: 100%;
   width: 100%;
-  height: 100%;
+  height: 70%;
   z-index: -1;
+}
+
+/* Define the animation for the balls */
+.ball {
+  animation: bounce 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.icon_1 {
+  animation-delay: 0s;
+}
+
+.icon_3 {
+  animation-delay: 1s;
+}
+
+.icon_4 {
+  animation-delay: 1.5s;
+}
+
+.icon_7 {
+  animation-delay: 3s;
+}
+
+.icon_10 {
+  animation-delay: 3.5s;
+}
+
+.cl_img {
+  animation: slowBlink 4s infinite;
+  opacity: 0;
+}
+
+@keyframes slowBlink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.icon_2 {
+  animation-delay: 1s;
+}
+
+.icon_5 {
+  animation-delay: 3s;
+}
+
+.icon_6 {
+  animation-delay: 6s;
+}
+
+.icon_8 {
+  animation-delay: 7s;
+}
+
+.icon_9 {
+  animation-delay: 9s;
 }
 
 /* animation of images and text */

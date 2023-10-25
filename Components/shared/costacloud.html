@@ -14,19 +14,6 @@
     <title>Costacloud</title>
   </head>
   <body>
-    <div class="strip" >
-      <div class="logo_mail_container">
-       <img src="/Assets/images/email.png" height="20" width="20"/>
-        <h1 class="costacloud_mail">sales@costacloud.com</h1>
-      </div>
-      <div class="contact" >
-        <h1 class="business">Contact us for Business Needs: <span>+91-9090979741 , +91-9090050518</span></h1>
-        <div class="logos" style="padding: 5px; margin-right: 10px;">
-          <img src="/Assets/images/ico-linkedin.png" alt="image is not found"  height="15" width="15"/>
-          <img src="/Assets/images/ico-fb.png" alt="image is not  found"   height="15" style="margin-left: 20px;"/>
-        </div>
-      </div>
-    </div>
     <nav class="navbar">
       <div class="logo">
           <img
@@ -590,6 +577,7 @@ $(document).ready(function () {
 
 // Scroll Animation
 const resources = document.getElementsByClassName("resources");
+const mainSection = document.getElementsByClassName("resources_managed_section")
 
 setTimeout(() => {
   resources[0].addEventListener("scroll", () => {
@@ -611,12 +599,11 @@ setTimeout(() => {
 
     if (newHeadingIndex !== currentHeadingIndex) {
       currentHeadingIndex = newHeadingIndex;
-      console.log(currentHeadingIndex);
       const imagesSrc = [
-        "/Assets/images/homepage-saves-trees.jpg",
-        "/Assets/images/homepage-saves-time.jpg",
-        "/Assets/images/homepage-data-managed.jpg",
-        "/Assets/images/homepage-security.jpg"
+        "/Assets/images/Treesave.png",
+        "/Assets/images/timesaved.png",
+        "/Assets/images/datamanaged.png",
+        "/Assets/images/security.png"
       ];
 
       images.querySelector(".saved_tree_images").src = imagesSrc[currentHeadingIndex];
@@ -647,11 +634,8 @@ setTimeout(() => {
       animationTriggered = true;
     }
   }
-
-  // Initially, check if the animation should trigger
   animateOnScroll();
 
-  // Attach the scroll event listener
   window.addEventListener("scroll", animateOnScroll);
 });
 
@@ -665,6 +649,9 @@ function isElementInViewport(element) {
   );
 }
 // bubble animation
+// Trigger the animation by adding and removing the class
+
+
 
 
     </script>
