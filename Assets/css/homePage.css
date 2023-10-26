@@ -161,11 +161,11 @@ video {
 
 .our_offices {
   text-align: left;
-  font-size: x-large;
+  font-size:2.5rem !important;
   font-weight: bold;
   padding: 30px !important;
   margin: 0px auto;
-  color: #325877;
+  color: #000000;
 }
 
 .footer {
@@ -218,7 +218,7 @@ video {
   max-width: 100%;
   width: 100%;
 }
-.text_container::after {
+.text_container::after{
   content: "";
   width: 150px;
   height: 2px;
@@ -227,6 +227,49 @@ video {
   margin: 0 auto;
   position: relative;
   top: -1rem;
+}
+
+.ourclient_h1::after{
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #ff3654;
+  display: block;
+  position: relative;
+  margin-bottom: 15px !important;
+}
+
+.offices_h1::after{
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: #ff3654;
+  display: block;
+  position: relative;
+  margin-bottom: 15px !important;
+  top: -1rem;
+  margin-left: 30px;
+}
+
+.static_h1::after {
+  content: "";
+  width: 260px;
+  height: 2px;
+  background-color: #ff3654;
+  display: block;
+  position: relative;
+}
+
+.hea::after{
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: #ff3654;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -2rem;
+
 }
 
 .ab_span {
@@ -249,16 +292,38 @@ video {
   gap: 80px !important;
   position: relative;
   left: 3%;
+  margin-top: 30px;
 }
 
-.unitech_logo {
-  max-height: 100vh;
-  height: 150px !important;
+.testimonial_content {
+  max-width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+  margin-top: 20px;
 }
+
+.testimonial_content p {
+  font-size: 15px !important;
+}
+
+
 
 .img_test {
   height: 60px !important;
   margin-top: 20px;
+  position: relative;
+  left: 5%;
+}
+
+.testimonial_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 25%;
 }
 
 ._items {
@@ -269,12 +334,11 @@ video {
   max-width: 100%;
   width: 76% !important;
   position: relative;
-  top: -3rem;
 }
 
 .static_h1 {
   padding: 30px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .static_h1 h1 {
@@ -295,7 +359,20 @@ video {
 .bubble_1 {
   position: relative;
   left: 56%;
-  top: -2rem;
+}
+
+.nhb_logo {
+  height: 90px;
+  width: 90px;
+}
+
+.maxlife_logo{
+  height: 70px !important;
+}
+
+.rock_auto{
+  height: 80px;
+  width: 200px;
 }
 
 .p_ {
@@ -320,6 +397,11 @@ video {
   width: 100px;
 }
 
+.five_star{
+ height: 15px !important;
+  
+}
+
 .arrow_items {
   display: flex;
   justify-content: space-evenly;
@@ -328,7 +410,7 @@ video {
   width: 56% !important;
   position: relative;
   left: 20%;
-  top: -3rem;
+  top: -1rem;
 }
 
 .arrow_b {
@@ -337,8 +419,6 @@ video {
   align-items: center;
   text-align: center;
 }
-
-
 
 .p {
   text-align: center !important;
@@ -765,8 +845,7 @@ video {
 .client_heading {
   text-align: left;
   font-weight: bold;
-  color: #325877;
-  font-size: 2rem !important;
+  font-size: 2.5rem !important;
   position: relative;
 }
 
