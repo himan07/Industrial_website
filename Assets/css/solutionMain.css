@@ -59,3 +59,44 @@ ul li {
         max-width: 90%;
     }
 }
+
+.careers_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.careers_img img{
+    height: 80vh;
+    margin: 50px;
+}
+
+.recruitment_h1{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.campus_::after{
+    content: "";
+    width: 150px;
+    height: 1px;
+    background-color: #ff3654;
+    display: block;
+    position: relative;
+    margin-bottom: 15px !important;
+}
+
+.current_openings::after{
+    content: "";
+    width: 150px;
+    height: 1px;
+    background-color: #ff3654;
+    display: block;
+    position: relative;
+    margin-bottom: 15px !important;
+}
+
+.current_openings{
+    margin-top: 50px;
+}

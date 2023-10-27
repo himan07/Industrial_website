@@ -154,9 +154,50 @@ video {
   font-weight: bold;
 }
 
-.about_costacloud {
+/* .about_costacloud {
   padding: 30px;
-}
+  width: 100%;
+  margin: 0 auto;
+  background: #f0f0f7;
+  padding: 0 0 10px;
+} */
+/* 
+.curve{
+  width: 100%;
+    height: 80px;
+    border-radius: 0 0 40px 40px;
+    background-color: #f4f4fa;
+    position: relative;
+} */
+
+/* .curve::before{
+  content: " ";
+    width: 145px;
+    height: 50px;
+    position: absolute !important;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+
+/* .line_break{
+  width: 100%;
+  height: 40px;
+  border-radius: 0 0 40px 40px !important;
+  background-color: #fff;
+  position: relative;
+} */
+
+/* .line_break::before{
+  content: " ";
+    width: 145px;
+    height: 50px;
+    position: absolute;
+    bottom: -22px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("/Assets/images/animation/shape.png");
+} */
 
 .our_offices {
   text-align: left;
@@ -216,6 +257,7 @@ video {
   margin-bottom: 20px !important;
   max-width: 100%;
   width: 100%;
+  margin-top: 40px;
 }
 .text_container::after {
   content: "";
@@ -272,8 +314,9 @@ video {
 
 .map_images {
   max-width: 100%;
-  width: 65%;
+  width: 90%;
   position: relative;
+  margin: 30px;
 }
 
 .india_location {
@@ -299,7 +342,7 @@ video {
 
 .infographic_gif {
   max-width: 100%; 
-  height: 95vh; 
+  height: 60vh; 
   display: block; 
 }
 
@@ -310,6 +353,10 @@ video {
 }
 
 /* Testimonials */
+.testimonials{
+  margin: 50px;
+}
+
 .heading_testimonial {
   text-align: center !important;
   font-size: 2.8rem !important;
@@ -849,20 +896,24 @@ video {
   grid-template-columns: 1fr 1fr;
 }
 .clients_section {
+  max-width: 100%;
   position: relative;
   margin: 20px;
   max-height: 100vh;
-  height: 70vh;
+  height: 80vh;
+  height: 80vh;
+  border: 1px solid #f9f9f9;
+  background-color: #f9f9f9;
+  /* box-shadow: 10px 10px 10px 2px #e2e2e2; */
+  border-radius: 30px;
 }
 
 .heading_text {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
   margin: 20px;
   position: relative;
-  top: 15%;
+  top: 50% !important;
   max-width: 100%;
   width: 90%;
 }
@@ -872,7 +923,7 @@ video {
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 20%;
+  top: 50% !important;
   left: 2%;
 }
 
@@ -967,9 +1018,7 @@ video {
   margin-right: 0;
 }
 
-.clients_section {
-  max-width: 100%;
-}
+
 
 .clients_section::before {
   content: "";

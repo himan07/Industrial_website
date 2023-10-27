@@ -111,7 +111,7 @@
             <img src="../../Assets/images/dropdown.png" class="dropdown_icon" />
           </a>
         </li>
-        <li><a href="#" class="nav_items">Careers</a></li>
+        <li><a href="#" class="nav_items" id="careers" onclick="loadPage('Careers')">Careers</a></li>
         <li><a href="#" class="nav_items">Contact Us</a></li>
       </ul>
     </nav>
@@ -483,10 +483,18 @@ $(document).ready(function () {
                 content.innerHTML = "<h1>error while loading the page</h1>";
               });
             break;
+            case "Careers":
+            fetch("Careers.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
             
-            
-          
-          case "contact":
+          case "Careers":
             content.innerHTML =
               "<h1>Contact Us</h1><p>Contact information goes here.</p>";
             break;
@@ -578,6 +586,12 @@ $(document).ready(function () {
 // Scroll Animation
 const resources = document.getElementsByClassName("resources");
 const mainSection = document.getElementsByClassName("resources_managed_section")
+const container = document.getElementsByClassName("container");
+
+window.addEventListener("scroll", (items) => {
+  // alert("scrolling", items)
+  console.log("container_items", container[0].children)
+})
 
 setTimeout(() => {
   resources[0].addEventListener("scroll", () => {
