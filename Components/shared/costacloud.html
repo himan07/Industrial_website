@@ -583,35 +583,74 @@ $(document).ready(function () {
     document.getElementById("cms").style.display='none';
     document.getElementById("enterprise").style.display='none';
 
-// Scroll Animation
-const resources = document.getElementsByClassName("resources");
-const mainSection = document.getElementsByClassName("resources_managed_section")
-const container = document.getElementsByClassName("container");
 
-window.addEventListener("scroll", (items) => {
-  // alert("scrolling", items)
-  console.log("container_items", container[0].children)
-})
+// Scroll Animation
+const container = document.getElementsByClassName("container");
+const resourcesSection = document.getElementsByClassName('resources_managed_section');
+const resources = document.getElementsByClassName('resources');
+const imageDiv = document.getElementsByClassName("saved_tree_images_container")
+const body = document.querySelector('body');
+let canScroll = false;
+
 
 setTimeout(() => {
+  resourcesSection[0].addEventListener('mouseenter', (event) => {
+    event.preventDefault()
+    canScroll = true;
+    resources[0].style.overflowY = 'auto';
+  });
+
+  resourcesSection[0].addEventListener('mouseleave', (event) => {
+    event.preventDefault(); 
+    canScroll = false;
+    resources[0].style.overflowY = 'hidden';
+  });
+
+  imageDiv[0].addEventListener('mouseenter', (event) => {
+  event.preventDefault(); 
+  canScroll = true;
+  resources[0].style.overflowY = 'auto';
+  resourcesSection[0].style.position = 'sticky';
+});
+
+  imageDiv[0].addEventListener('mouseleave', (event) => {
+event.preventDefault()
+    canScroll = false;
+    resources[0].style.overflowY = 'hidden';
+  });
+
+  window.addEventListener('scroll', (event) => {
+  if (canScroll) {
+    const maxScroll = resources[0].scrollHeight - resources[0].clientHeight;
+    if (resources[0].scrollTop < maxScroll) {
+      resources[0].scrollTop = window.scrollY;
+    }
+  }
+  }
+
+  );
+
   resources[0].addEventListener("scroll", () => {
-    const headings = document.querySelectorAll(".resources > div > h1");
-    const images = document.querySelector(".images");
+    const headings = document.querySelectorAll(".resources > div > h1"); 
+    const images = document.querySelector(".saved_tree_images_container"); 
 
     let currentHeadingIndex = 0;
-    const containerScrollY = resources[0].scrollTop + resources[0].clientHeight / 2;
+    const containerScrollY = resources[0].scrollTop + resources[0].clientHeight/2;
     let newHeadingIndex = currentHeadingIndex;
+
 
     headings.forEach((heading, index) => {
       const headingTop = heading.offsetTop - resources[0].offsetTop;
       const headingHeight = heading.clientHeight;
+      console.log(containerScrollY < headingTop)
 
-      if (containerScrollY >= headingTop && containerScrollY < headingTop + headingHeight) {
+      if (containerScrollY > headingTop && containerScrollY < headingTop + headingHeight) {
         newHeadingIndex = index;
+        console.log("newHeadingIndex", newHeadingIndex)
       }
     });
 
-    if (newHeadingIndex !== currentHeadingIndex) {
+    if (newHeadingIndex !== currentHeadingIndex && canScroll) {
       currentHeadingIndex = newHeadingIndex;
       const imagesSrc = [
         "/Assets/images/Treesave.png",
@@ -619,11 +658,21 @@ setTimeout(() => {
         "/Assets/images/datamanaged.png",
         "/Assets/images/security.png"
       ];
-
       images.querySelector(".saved_tree_images").src = imagesSrc[currentHeadingIndex];
     }
   });
 }, 1000);
+
+// testimonial home page carousal
+document.getElementsByClassName("carousel-control-prev").addEventListener("click", function (event) {
+    event.preventDefault(); 
+    $("#myCarousel").carousel("prev"); 
+  });
+
+  document.getElementsByClassName("carousel-control-next").addEventListener("click", function (event) {
+    event.preventDefault(); 
+    $("#myCarousel").carousel("next"); 
+  });
 
 // see more card
            function toggleText(button) {
@@ -631,37 +680,6 @@ setTimeout(() => {
             cardText.style.maxHeight = cardText.style.maxHeight === 'none' ? '90px' : 'none';
             button.textContent = button.textContent === 'See more' ? 'See less' : 'See more';
             }
-
-
-   // animations
-   document.addEventListener("DOMContentLoaded", function () {
-  const verticalAnimation = document.querySelector(".vertical_animation");
-  const animatedElements = document.querySelectorAll(".top_imgs, .btm_imgs, .clients, .numbers");
-  let animationTriggered = false;
-
-  function animateOnScroll() {
-    if (isElementInViewport(verticalAnimation) && !animationTriggered) {
-      verticalAnimation.classList.add("animated");
-      animatedElements.forEach(element => {
-        element.classList.add("animated");
-      });
-      animationTriggered = true;
-    }
-  }
-  animateOnScroll();
-
-  window.addEventListener("scroll", animateOnScroll);
-});
-
-function isElementInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
     </script>
     </div>
   </body>

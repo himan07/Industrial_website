@@ -1,0 +1,120 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px !important;
+}
+
+.container {
+  height: auto;
+  max-width: 100% !important;
+  background-color: #fff;
+  /* padding: 30px !important; */
+}
+
+.banner {
+  max-width: 100%;
+}
+
+.banner img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.careers_content {
+  margin: 50px 0px 60px 0px;
+}
+
+.careers_content p {
+  text-align: center;
+  word-wrap: break-word;
+}
+._h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perks_b {
+  position: relative;
+  left: -0.6rem;
+  top: -0.8rem;
+}
+
+.bubble_h1 img{
+    position: relative;
+    left: 0.6rem;
+    top: -0.8rem;
+}
+
+.bubble_h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
+
+.bubble_h1 h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.content_campus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+._h1 h1 {
+  text-align: center !important;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.perks_card {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.first_sec,
+.second_sec {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 5px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.top_card {
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  height: 140px;
+}
+
+.bottom_card {
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  height: 140px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px !important;
+  position: relative;
+}
+
+.card-text p {
+  text-align: center !important;
+}
+
+.campus_recruitment{
+    margin: 50px;
+}
