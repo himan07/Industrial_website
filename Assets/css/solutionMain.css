@@ -87,6 +87,11 @@ ul li {
     margin-bottom: 15px !important;
 }
 
+
+.footer{
+    background:  #325877 !important;;
+  }
+
 .current_openings::after{
     content: "";
     width: 150px;

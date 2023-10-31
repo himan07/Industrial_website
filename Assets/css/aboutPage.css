@@ -12,6 +12,17 @@ body {
   padding: 0 !important;
 }
 
+.timeline_section {
+  max-width: 100%;
+  width: 100%;
+}
+
+.timeline_section img {
+  max-width: 100%;
+  width: 70%;
+  /* margin-top: 50px; */
+}
+
 .banner_container {
   max-width: 100%;
 }
@@ -26,7 +37,7 @@ body {
   padding: 30px;
 }
 
-.content_section{
+.content_section {
   margin-top: 20px !important;
 }
 
@@ -50,15 +61,79 @@ body {
   margin: 0px 30px 0px 30px !important;
 }
 
-.content_leader{
+
+
+.keycustomer {
+  padding: 30px;
+  margin: 0px 30px 30px 30px !important;
+}
+
+
+.first_key{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 60px 30px 20px 50px;
+}
+
+.second_key{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 20px 20px 20px 60px;
+  max-width: 100%;
+  width: 75%;
+  position: relative;
+  left: 8%;
+
+}
+
+.key_customer_head::after{
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: #ff3654;
+  display: block;
+  position: absolute;
+  margin: 0px 0px 0px 0px;
+}
+
+.journey::after{
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: #ff3654;
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+}
+
+.journey h1{
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
+}
+
+
+.key_customer_head h1{
+  font-weight: bold;
+  color: #000000;
+}
+
+.first_key img, .second_key img{
+  height: 160px;
+  width: 160px;
+}
+
+.content_leader {
   position: relative;
   top: -2rem;
 }
 
 .timeline_section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 80px;
 }
 
 .about_content,
@@ -81,7 +156,7 @@ body {
 .heading::after {
   content: "";
   width: 120px;
-  height: 1px;
+  height: 2px;
   background-color: #ff3654;
   display: block;
   position: relative;
@@ -91,12 +166,16 @@ body {
 .key_heading::after {
   content: "";
   width: 200px;
-  height: 1px;
+  height: 2px;
   background-color: #ff3654;
   display: block;
   position: absolute;
-  right: 10px; 
+  right: 10px;
   margin: 0px 0px 0px 0px;
+}
+
+.footer{
+  background:  #325877 !important;;
 }
 
 .mission_content,

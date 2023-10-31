@@ -254,7 +254,7 @@ video {
 .text_container::after {
   content: "";
   width: 150px;
-  height: 1px;
+  height: 2px;
   background-color: #ff3654;
   display: block;
   margin: 0 auto;
@@ -265,7 +265,7 @@ video {
 .ourclient_h1::after {
   content: "";
   width: 100px;
-  height: 1px;
+  height: 2px;
   background-color: #ff3654;
   display: block;
   position: relative;
@@ -275,7 +275,7 @@ video {
 .offices_h1::after {
   content: "";
   width: 200px;
-  height: 1px !important;
+  height: 2px !important;
   background-color: #ff3654;
   display: block;
   position: relative;
@@ -287,7 +287,7 @@ video {
 .static_h1::after {
   content: "";
   width: 260px;
-  height: 1px;
+  height: 2px;
   background-color: #ff3654;
   display: block;
   position: relative;
@@ -296,7 +296,7 @@ video {
 .hea::after {
   content: "";
   width: 200px;
-  height: 1px;
+  height: 2px;
   background-color: #ff3654;
   display: block;
   margin: 0 auto;

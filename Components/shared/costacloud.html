@@ -47,11 +47,12 @@
             <div class="row">
               <div class="col-md-6">
                 <a class="dropdown-item first-item row" href="#" onclick="showSubItems('ai_items');"style="color: #325877;">ARTIFICIAL INTELLIGENCE</a>
-                <a class="dropdown-item row" href="#" onclick="showSubItems('devops')" >DEVOPS</a>               
+                <a class="dropdown-item row" href="#" onclick="showSubItems('devops')" >DevOps/SecOps</a>               
                 <a class="dropdown-item row" href="#" onclick="showSubItems('cloud_enablement')">CLOUD ENABLEMENT SERVICES</a>               
-                <a class="dropdown-item row" href="#" onclick="showSubItems('eGov')" >EGOVERMENT SERVICES</a>               
+                <a class="dropdown-item row" href="#" onclick="showSubItems('eGov')" >EGOVERNMENT SERVICES</a>               
                 <a class="dropdown-item row" href="#" onclick="showSubItems('cms')" >CONTENT MANAGEMENT</a>               
                 <a class="dropdown-item row" href="#" onclick="showSubItems('enterprise')">ENTERPRISE SOLUTION</a>               
+                <a class="dropdown-item row" href="#" onclick="showSubItems('security')">Security</a>               
               </div>
               <div class="col-md-6">
                 <div id="ai_items" class="submenu">
@@ -98,6 +99,14 @@
                   <a class="dropdown-item" href="#"  onclick="loadPage('emplOnbording')">Employee Onboarding & Offboarding</a>
                   <a class="dropdown-item" href="#"  onclick="loadPage('bpa')"> Business Process Automation</a>
                   <a class="dropdown-item" href="#"  onclick="loadPage('rpa')"> Robotic Process Automation
+                  </a>
+                </div>
+                <div id="security" class="submenu">
+                  <a class="dropdown-item" href="#"  onclick="loadPage('xdr')">XDR</a>
+                  <a class="dropdown-item" href="#"  onclick="loadPage('endpoints_security')">Endpoint Security</a>
+                  <a class="dropdown-item" href="#"  onclick="loadPage('data_security')">Data Security</a>
+                  <a class="dropdown-item" href="#"  onclick="loadPage('network')">Network Detection & Response</a>
+                 
                   </a>
                 </div>
               </div>
@@ -493,6 +502,48 @@ $(document).ready(function () {
                 content.innerHTML = "<h1>error while loading the page</h1>";
               });
             break;
+            case "xdr":
+            fetch("security/xdr.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            
+            case "endpoints_security":
+            fetch("security/endpointSecurity.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            case "data_security":
+            fetch("security/DataSecurity.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
+            break;
+            case "network":
+            fetch("security/network.html")
+              .then((response) => response.text())
+              .then((html) => {
+                content.innerHTML = html;
+              })
+              .catch((error) => {
+                content.innerHTML = "<h1>error while loading the page</h1>";
+              });
+            break;
             
           case "Careers":
             content.innerHTML =
@@ -518,6 +569,7 @@ $(document).ready(function () {
     const eGov = document.getElementById("eGov");
     const cms = document.getElementById("cms");
     const enterprise = document.getElementById("enterprise");
+    const security = document.getElementById("security")
 
     $(document).ready(function() {
     $('.dropdown-item').click(function() {
@@ -535,7 +587,7 @@ $(document).ready(function () {
       eGov.style.display='none';
       cms.style.display='none';
       enterprise.style.display='none';
-
+      security.style.display = "none";
     } else if (itemType === 'devops') {
       devops.style.display = 'block';
       ai_items.style.display = 'none';
@@ -543,6 +595,7 @@ $(document).ready(function () {
       cloud_enablement.style.display='none';
       cms.style.display='none';
       enterprise.style.display='none';
+      security.style.display = "none";
 
     } else if(itemType==='cloud_enablement'){
       devops.style.display = 'none';
@@ -551,6 +604,7 @@ $(document).ready(function () {
       eGov.style.display='none';
       cms.style.display='none';
       enterprise.style.display='none';
+      security.style.display = "none";
 
     }else if(itemType==='eGov'){
       devops.style.display = 'none';
@@ -559,6 +613,7 @@ $(document).ready(function () {
       eGov.style.display='block';
       cms.style.display='none';
       enterprise.style.display='none';
+      security.style.display = "none";
 
     }else if(itemType === "cms"){
       devops.style.display = 'none';
@@ -567,14 +622,25 @@ $(document).ready(function () {
       eGov.style.display='none';
       cms.style.display='block';
       enterprise.style.display='none';
-
-    }else if(itemType === 'enterprise'){
+      security.style.display = "none";
+    }
+    else if(itemType === 'enterprise'){
       devops.style.display = 'none';
       ai_items.style.display = 'none';
       cloud_enablement.style.display='none';
       eGov.style.display='none';
       cms.style.display='none';
+      security.style.display = "none";
       enterprise.style.display='block';
+    }
+    else if(itemType === 'security'){
+      devops.style.display = 'none';
+      ai_items.style.display = 'none';
+      cloud_enablement.style.display='none';
+      eGov.style.display='none';
+      cms.style.display='none';
+      enterprise.style.display='none';
+      security.style.display = "block";
     }
   }
     document.getElementById('devops').style.display = 'none';
@@ -582,6 +648,7 @@ $(document).ready(function () {
     document.getElementById("eGov").style.display='none';
     document.getElementById("cms").style.display='none';
     document.getElementById("enterprise").style.display='none';
+    document.getElementById("security").style.display='none';
 
 
 // Scroll Animation
