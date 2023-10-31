@@ -126,8 +126,17 @@
     </nav>
     <main>
       <div id="content"></div>
-      
     </main>
+    <footer>
+      <div class="footer">
+        <iframe
+          src="../shared/footer.html"
+          frameborder="0"
+          width="100%"
+          height="300"
+        ></iframe>
+      </div>
+    </footer>
     <script>
 // code for run the crousal 
 $(document).ready(function () {
@@ -544,11 +553,6 @@ $(document).ready(function () {
                 content.innerHTML = "<h1>error while loading the page</h1>";
               });
             break;
-            
-          case "Careers":
-            content.innerHTML =
-              "<h1>Contact Us</h1><p>Contact information goes here.</p>";
-            break;
           default:
             content.innerHTML =
               "<h1>Page Not Found</h1><p>The requested page does not exist.</p>";
@@ -730,23 +734,13 @@ event.preventDefault()
   });
 }, 1000);
 
-// testimonial home page carousal
-document.getElementsByClassName("carousel-control-prev").addEventListener("click", function (event) {
-    event.preventDefault(); 
-    $("#myCarousel").carousel("prev"); 
-  });
-
-  document.getElementsByClassName("carousel-control-next").addEventListener("click", function (event) {
-    event.preventDefault(); 
-    $("#myCarousel").carousel("next"); 
-  });
-
 // see more card
            function toggleText(button) {
             const cardText = button.previousElementSibling;
             cardText.style.maxHeight = cardText.style.maxHeight === 'none' ? '90px' : 'none';
             button.textContent = button.textContent === 'See more' ? 'See less' : 'See more';
             }
+
     </script>
     </div>
   </body>

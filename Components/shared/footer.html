@@ -27,8 +27,10 @@
           </div>
         </div>
         <div class="second_part">
-          <h1 class="heading_footer" style="margin-left: -2px;">Services</h1>
-          <p class="p_f">Document Management System</p>
+          <h1 class="heading_footer" style="margin-left: -2px">Services</h1>
+          <p class="p_f document_management" style="cursor: pointer">
+            Document Management System
+          </p>
           <p class="p_f">
             TeamSync Content<br />
             Collaboration
@@ -42,7 +44,7 @@
           <p class="p_f">Vendor Portal</p>
         </div>
         <div class="third_part">
-          <h1 class="heading_footer" style="margin-left: -2px;">Useful Links</h1>
+          <h1 class="heading_footer" style="margin-left: -2px">Useful Links</h1>
           <p class="p_f">Solutions</p>
           <p class="p_f">Contact us</p>
           <p class="p_f">Careers</p>
@@ -85,11 +87,41 @@
               padding: 20px;
             "
           >
-            <img src="../../Assets/images/ico-linkedin.png" height="20" width="20"/>
+            <img
+              src="../../Assets/images/ico-linkedin.png"
+              height="20"
+              width="20"
+            />
             <img src="../../Assets/images/ico-fb.png" height="20" />
           </div>
         </div>
       </div>
     </footer>
+    <script>
+      const content = document.getElementById("content");
+      const dmsElements = document.getElementsByClassName(
+        "document_management"
+      );
+
+      // Loop through each element with the class "document_management"
+      for (const dmsElement of dmsElements) {
+        dmsElement.addEventListener("click", function () {
+          console.warn("clicked");
+          fetch("ContentManagement/dms.html")
+            .then((response) => {
+              console.log("Response status:", response.status);
+              return response.text();
+            })
+            .then((html) => {
+              console.log("Fetched HTML:", html);
+              content.innerHTML = html;
+            })
+            .catch((error) => {
+              console.error("Fetch error:", error);
+              content.innerHTML = "<h1>Error while loading the page</h1>";
+            });
+        });
+      }
+    </script>
   </body>
 </html>
