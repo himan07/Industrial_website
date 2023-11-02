@@ -20,7 +20,6 @@ body {
 .timeline_section img {
   max-width: 100%;
   width: 70%;
-  /* margin-top: 50px; */
 }
 
 .banner_container {
@@ -65,7 +64,7 @@ body {
 
 .keycustomer {
   padding: 30px;
-  margin: 0px 30px 30px 30px !important;
+  margin: 0px 30px 30px 40px !important;
 }
 
 
@@ -82,7 +81,7 @@ body {
   max-width: 100%;
   width: 75%;
   position: relative;
-  left: 8%;
+  left: 8.5%;
 
 }
 
